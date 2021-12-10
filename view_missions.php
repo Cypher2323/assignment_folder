@@ -4,7 +4,7 @@
 // in a nice table
 include "connect_database.php";
 
-$query = "SELECT * FROM missions";
+$query = "SELECT * FROM mission";
 
 $result = mysqli_query($connection, $query);
 
@@ -21,10 +21,10 @@ if (mysqli_num_rows($result) > 0) {
 $i=0;
 while($row = mysqli_fetch_array($result)) {
 	echo "<tr>";
-	echo "<td>".$row["mission_destination"]."</td>";
-	echo "<td>".$row["mission_date"]."</td>";
-	echo "<td>".$row["mission_type"]."</td>";
-	echo "<td>".$row["number_of_crew_members"]."</td>";
+	echo "<td>".$row["destination"]."</td>";
+	echo "<td>".$row["launch_date"]."</td>";
+	echo "<td>".$row["type"]."</td>";
+	echo "<td>".$row["crew_size"]."</td>";
 	echo "<td>".$row["target_id"]."</td>";
 	echo "</tr>";
 	$i++;

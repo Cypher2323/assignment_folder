@@ -19,8 +19,7 @@ $i=0;
 while($row = mysqli_fetch_array($result)) {
 	echo "<tr>";
 	echo "<td>".$row["astronaut_id"]."</td>";
-	echo "<td>".$row["name"]."</td>";
-	echo "<td>".$row["no_missions"]."</td>";
+	echo "<td>".$row["mission_id"]."</td>";
 	echo "</tr>";
 	$i++;
 }

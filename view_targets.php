@@ -8,7 +8,6 @@ $query = "SELECT * FROM targets";
 
 $result = mysqli_query($connection, $query);
 
-if (mysqli_num_rows($result) > 0) {
 	
 if (mysqli_num_rows($result) > 0) {
 	echo "<table class=`table table-bordered table-striped`>";
@@ -22,10 +21,10 @@ if (mysqli_num_rows($result) > 0) {
 $i=0;
 while($row = mysqli_fetch_array($result)) {
 	echo "<tr>";
-	echo "<td>".$row["target_name"]."</td>";
-	echo "<td>".$row["mission_type"]."</td>";
-	echo "<td>".$row["date_of_first_mission"]."</td>";
-	echo"<td>".$row["number_of_missions"]."</td>";
+	echo "<td>".$row["name"]."</td>";
+	echo "<td>".$row["type"]."</td>";
+	echo "<td>".$row["first_mission"]."</td>";
+	echo"<td>".$row["no_missions"]."</td>";
 	echo "</tr>";
 	$i++;
 }
